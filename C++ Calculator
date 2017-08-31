@@ -1,0 +1,97 @@
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	float a, b;
+	char op;
+	
+	int Number;
+	
+	
+	cout<< "What type of calculator do you want to use?" <<endl;
+	cout<< "\nFor Normal type 1 and for Scientific type 2: ";
+	cin>> Number;
+	
+	if (Number==1) {
+	
+	cout<< "\n\n\n\nYou're now using Normal calculator" <<endl;
+	cout<< "\n\nEnter first number: ";
+	cin>> a; 
+	cout<< "Enter an operation: ";
+	cin>> op;
+	cout<< "Enter second number: ";
+	cin>> b;
+	
+	switch(op) {
+		case '+' : cout<< "\nThe answer is: " << a+b << endl;
+		break;
+	
+		case '-' : cout<< "\nThe answer is: " << a-b << endl;
+		break;
+		
+		case '*' : cout<< "\nThe answer is: " << a*b << endl;
+		break;
+		
+		case '/' : if (b==0) 
+		{   cout<< "\nSorry you can't devide by zero" <<endl;
+			break;
+		}
+		else
+		cout<< "\nThe answer is: " << a/b << endl;
+		break;
+		
+		default : cout<< "\nSorry wrong operation :(" << endl;
+		break;	
+	}
+}
+	
+	
+	else if(Number==2) 
+	{
+	
+	cout<< "\n\n\n\nYou're now using Scientific calculator" <<endl;
+	cout<< "\n\nSome instructions of using" <<endl;
+	cout<< "\nFor calculating sin of a number, type               s "<< endl;  
+	cout<< "For calculating cos of a number type, type          c" << endl;
+	cout<< "For calculating tan of a number type, type          t" << endl;
+	cout<< "For calculating absolute of a number type, type     a" << endl;
+	cout<< "For calculating natural log of a number type, type  l" << endl;
+	cout<< "For calculating log10 of a number type, type        e" << endl;
+	
+	
+	cout<< "\n\nEnter number: ";
+	cin>> a; 
+	cout<< "Enter an operation: ";
+	cin>> op;
+	
+	
+	switch (op) {
+		case 's' : cout<< "\nThe sin of "<< a << " is: " << sin(a) << endl;
+		break;
+		
+		case 'c' : cout<< "\nThe cos of "<< a << " is: " << cos(a) << endl;
+		break;
+		
+		case 't' : cout<< "\nThe tan of "<< a << " is: " << tan(a) << endl;
+		break;
+		
+		case 'a' : cout<< "\nThe absolute of "<< a << " is: " << fabs(a) << endl;
+		break;
+		
+		case 'l' : cout<< "\nThe natural log of "<< a << " is: " << log(a) << endl;
+		break;
+		
+		case 'e' : cout<< "\nThe log to the base 10 of "<< a << " is: " << log10(a);
+		break;
+		
+		default : cout<< "\nSorry wrong operation entered :(" << endl;
+		break;
+	}
+}
+getch();
+}
